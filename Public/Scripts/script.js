@@ -19,7 +19,7 @@ function getUserData(gender){
       let output = ""
                 data.results.map((user) => {
                     output +=  `
-                        <div class="card m-2" style="width: 18rem;">
+                        <div class="card m-3" style="width: 18rem;">
                         <img src=${user.picture.large} class="card-img-top rounded" alt="picture of ${user.name.first} ${user.name.last}">
                         <div class="card-body align-items-center">
                             <h5 class="card-title">${user.name.first} ${user.name.last}</h5>
@@ -33,7 +33,7 @@ function getUserData(gender){
     .catch(err => {
       let output = `<div class="alert alert-danger" role="alert">
       ${err}
-     </div>`
+      </div>`
       document.querySelector('#results').innerHTML = output;
     })
 }
