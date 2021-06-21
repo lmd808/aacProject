@@ -1,3 +1,4 @@
+const http = new reqHTTP
 document.getElementById('button1').addEventListener('click', checkButton)
 document.getElementById('button2').addEventListener('click', checkButton)
 
@@ -13,36 +14,5 @@ function checkButton (){
 
 // Get user data 
 function getUserData(gender){
-
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', `https://randomuser.me/api/?results=9&gender=${gender}`, true);
-  xhr.onload = function() {
-    if(this.status === 200) {
-      const response = JSON.parse(this.responseText);
-      let output = ""
-      if(response) {
-        response.results.map((user) => {
-            output +=  `
-            <div class="card m-2" style="width: 18rem;">
-            <img src=${user.picture.large} class="card-img-top rounded" alt="picture of ${user.name.first} ${user.name.last}">
-            <div class="card-body align-items-center">
-                <h5 class="card-title">${user.name.first} ${user.name.last}</h5>
-                <p class="card-text">${user.email}</p>
-                <a href="#" class="btn btn-primary">Send ${user.name.first} a message...</a>
-            </div>
-            </div>   
-            `
-        })
-      } else {
-        output += `
-        <div class="alert alert-danger" role="alert">
-            <h1>Oh No! Something went wrong!</h1>
-            <p>Try refreshing the page and try again.</p>
-        </div>
-        `;
-      }
-      document.querySelector('#results').innerHTML = output;
-    }
-    }
-  xhr.send();
+  http.get(`https://randomuser.me/api/?results=9&gender=${gender}`)
 }
