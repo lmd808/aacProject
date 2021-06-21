@@ -1,4 +1,4 @@
-
+// BEGINNING OF HTTP REQ LIBRARY 
 class reqHTTP {
     //Make and HTTP GET request 
     async get(url) {
