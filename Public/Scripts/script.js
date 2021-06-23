@@ -24,10 +24,10 @@ function getUserData(gender){
           output +=  `
             <div class="card m-3" style="width: 18rem;" id=${index + 1}>
               <img src=${user.picture.large} class="card-img-top rounded" alt="picture of ${user.name.first} ${user.name.last}">
-              <div class="card-body align-items-center">
+              <div class="card-body align-items-center text-center">
                 <h5 class="card-title">${user.name.first} ${user.name.last}</h5>
-                <p class="card-text">${user.email}</p>
-                <a href="#" class="btn btn-primary">Send ${user.name.first} a message...</a>
+                <small class="card-text">${user.email}</small>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-primary mt-2">Message ${user.name.first}</a>
               </div>
             </div>`})
         // APPEND OUTPUT TO RESULTS DIV    
