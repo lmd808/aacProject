@@ -16,22 +16,22 @@ A simple Node server project using the RandomUser.me API
 * [Bootstrap](https://getbootstrap.com/)- front-end open source toolkit, featuring responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
 
 ## File Structure 
-AACProject (Base Directory)
-    - Node_modules (contains directories for all node modules)
-    - Public
-        - Scripts
-            - userApiLib.js
-            - script.js
-        - Styles
-        - Images
-        - Utilities 
-    - Views
-        - index.html
-    - server.js (node server file)
-    - .gitignore
-    - package.json
-    - package-lock.json
-    - README.md
++--AACProject (Base Directory)
+|    +-- Node_modules (contains directories for all node modules)
+|    +-- Public
+|        +-- Scripts
+|            +-- userApiLib.js
+|            +-- script.js
+|        +-- Styles
+|        +-- Images
+|        +-- Utilities 
+|    +-- Views
+|        +-- index.html
+|    +-- server.js (node server file)
+|    +-- .gitignore
+|    +-- package.json
+|    +-- package-lock.json
+|    +-- README.md
 
 ## Development Process- Personal Reflection 
 I redid the formatting of the API call a few times just to test out different call methods. The final version used ES7's async and await additions which work in Google Chrome, but are not supported in every browser. It would need to be compiled down to ES5 using either Webpack of Babel to ensure that it functions properly in all browsers. 
