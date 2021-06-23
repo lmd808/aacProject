@@ -16,7 +16,7 @@ A simple Node server project using the RandomUser.me API
 * [Bootstrap](https://getbootstrap.com/)- front-end open source toolkit, featuring responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
 
 ## File Structure 
-.
+
 +--AACProject (Base Directory)
 |    +-- Node_modules (contains directories for all node modules)
 |    +-- Public
